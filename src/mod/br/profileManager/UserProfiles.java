@@ -163,7 +163,7 @@ public class UserProfiles extends AbstractProfiles<ClientClasses> {
 
 		parameterProfileAction().addLine("Vanilla"
 				, ACTION_DEFAULT_TO_FILE
-				, "remove the settings you don't want vinilla, replace "
+				, "remove the settings you don't want vanilla, replace "
 				+ ACTION_DEFAULT_TO_FILE + " by " + ACTION_DEFAULT_UPDATE_FILE
 				+ " and " + ACTION_FILE_TO_GUI
 				+ " to keep some vanilla configuration");

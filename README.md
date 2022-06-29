@@ -23,3 +23,4 @@ Download build: https://rayfowler.itch.io/remnants-of-the-precursors
   - New Start with a totally rewritten Profiles Manager!
   - Added some on the side feature...
   - With an attempt of user manual! https://brokenregistry.github.io/pdf/Profiles.pdf
+  - Updated to ROTP Fusion-MOD v2022.06.25

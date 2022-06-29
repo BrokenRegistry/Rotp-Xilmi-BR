@@ -16,3 +16,10 @@ The description of the additions/changes by BrokenRegistry can be found there: <
 Official website: https://www.remnantsoftheprecursors.com/<br/>
 Community subreddit: https://www.reddit.com/r/rotp/<br/>
 Download build: https://rayfowler.itch.io/remnants-of-the-precursors
+
+## What'New
+
+2026.06.29
+  - New Start with a totally rewritten Profiles Manager!
+  - Added some on the side feature...
+  - With an attempt of user manual! https://brokenregistry.github.io/pdf/Profiles.pdf

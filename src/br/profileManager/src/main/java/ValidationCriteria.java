@@ -29,6 +29,7 @@ public class ValidationCriteria {
 	private boolean userViewEquals  = true ;
 	private boolean codeViewEquals  = true ;
 	private boolean categoryEquals  = false;
+	private boolean showOptions     = true;
 	private boolean userViewIsCaseSensitive  = false;
 	private boolean codeViewIsCaseSensitive  = false;
 	private boolean categoryIsCaseSensitive  = false;
@@ -71,6 +72,12 @@ public class ValidationCriteria {
 		return categoryEquals; 
 	}
 	
+	/**
+	 * @return <b>true</b>: options should be shown 
+	 */
+	boolean showOptions() { 
+		return showOptions; 
+	}
 	boolean userViewIsCaseSensitive() { 
 		return userViewIsCaseSensitive; 
 	}
@@ -147,6 +154,15 @@ public class ValidationCriteria {
 		return this; 
 	}
 	
+	/**
+	 * set showOptions
+	 * @param show the new value
+	 * @return this for chaining purpose
+	 */
+	public ValidationCriteria showOptions(boolean show) { 
+		showOptions = show;
+		return this; 
+	}
 	/**
 	 * @param caseSensitive the new value
 	 * @return this for chaining purpose

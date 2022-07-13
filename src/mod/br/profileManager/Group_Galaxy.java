@@ -754,7 +754,7 @@ public class Group_Galaxy extends  AbstractGroup <ClientClasses> {
 					+ "If you don’t like to have some AI as opponent,"
 					+ " or if your planetary distribution affect an AI too much,"
 					+ " you are able to remove them form the pool of selectable AI." + NL
-					+ "Only the AI on the list will be shown when you click on the selection rectangle." + NL
+					+ "Only the AI on the list will toggle when you click on the selection rectangle." + NL
 					+ "The AI list must be written using \"/\" as separator." + NL
 					+ "!!! Don’t break the lines !!! even if they become very long..."
 					+ " There is no multi-line analysis."
@@ -872,9 +872,8 @@ public class Group_Galaxy extends  AbstractGroup <ClientClasses> {
 					+ "If the option is \"GUI\" the opponent will be selected from the GUI AI FILTER list." + NL
 					+ "If the option is \"GAME\" the opponent will be selected from the GAME AI FILTER list." + NL
 					+ "If the option is \"random AI_1, AI_2, AI_N\"  the AI will be selected from the given list." + NL
-					+ "If the list is shorter than the number of opponents and the last option is random:"
-					+ " this last option will be applied to the remaining opponents."
-					+ " Otherwise the remaining opponents aren’t changed." + NL
+					+ "If the list is shorter than the number of opponents,"
+					+ " the last option will be applied to the remaining AI."
 					+ "The AI list must be written using \"/\" as separator." + NL
 					+ "!!! Don’t break the lines !!! even if they become very long..."
 					+ " There is no multi-line analysis."
@@ -941,9 +940,9 @@ public class Group_Galaxy extends  AbstractGroup <ClientClasses> {
 					+ "If the option is \"GAME\" the opponent AI will be selected from the GAME AI FILTER list." + NL
 					+ "If the option is \"random AI_1, AI_2, AI_N"
 					+ " the opponent AI will be selected from the given list." + NL
-					+ "If the list is shorter than the number of opponents,"
-					+ " this last option will be applied to the remaining opponents."
-					+ "The race list must be written using \"/\" as separator." + NL
+					+ "If the list is shorter than the number of AI,"
+					+ " the last option will be applied to the remaining AI."
+					+ "The AI list must be written using \"/\" as separator." + NL
 					+ "!!! Don’t break the lines !!! even if they become very long..."
 					+ " There is no multi-line analysis."
 					+ NL);

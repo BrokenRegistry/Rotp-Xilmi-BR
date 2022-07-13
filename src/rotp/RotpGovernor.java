@@ -87,7 +87,7 @@ public class RotpGovernor {
     }
 
     public static void main(String[] args) throws IOException {
-        String jarFilename = "rotp-" + governorVersion() + "-governor.jar";
+        String jarFilename = "rotp-" + Rotp.version + "-governor.jar";
         try {
             Class.forName("rotp.Rotp");
         } catch (ClassNotFoundException e) {

@@ -33,14 +33,6 @@ class UserProfilesTest {
 				, "Should not be initialized");
 	}
 
-//	@Test
-//	void getAllProfiles() {
-//		init();
-//		System.out.println("getAllProfiles()");
-//		System.out.println(userProfiles.getAllProfiles().toString());
-//		System.out.println();
-//	}
-
 	@Test
 	void processKey_U() {
 		init();
@@ -49,19 +41,5 @@ class UserProfilesTest {
 				, "This KeyEvent sould return false");
 	}
 
-//	@Test void GuiOpponentRaceList() {
-//		init();
-//		userProfiles.processKey(KeyEvent.VK_U, false, "", clientObject);
-//		param = userProfiles.getParameter("GUI OPPONENTS RACE FILTER");
-//		String result = param.toString(userProfiles.getAllProfiles());
-//		System.out.println(result);
-//		Lines<?, ?> line = param.getProfileLine("User");
-//		AbstractT<?> value =line.getValue();
-//		System.out.println("List");
-//		System.out.println(value.codeViewList().toString());
-//		System.out.println(value.toString());
-//		System.out.println(value.toString());
-//		System.out.println(line.toString());
-//	}
 
 }

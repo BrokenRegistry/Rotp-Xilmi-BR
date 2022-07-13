@@ -233,11 +233,11 @@ class Group_Modnar extends  AbstractGroup <ClientClasses> {
 		CompanionWorlds(ClientClasses go) {
 			super("COMPANION WORLDS", 
 					new Validation<Integer>(
-							new T_Integer(UserPreferences.companionWorlds())));
+							new T_Integer(UserPreferences.companionWorldsSigned())));
 
 			setHistoryCodeView(Default, 0); // MODNAR DEFAULT
-			setLimits(0 , 4);
-			setDefaultRandomLimits(0 , 4);
+			setLimits(-4 , 6);
+			setDefaultRandomLimits(-4 , 6);
 		}
 		
 		@Override public AbstractT<Integer> getFromGame (ClientClasses go) {
@@ -247,7 +247,7 @@ class Group_Modnar extends  AbstractGroup <ClientClasses> {
 		@Override public void putToGame(ClientClasses go, AbstractT<Integer> value) {}
 		
 		@Override public AbstractT<Integer> getFromUI (ClientClasses go) {
-			return new T_Integer(UserPreferences.companionWorlds());
+			return new T_Integer(UserPreferences.companionWorldsSigned());
 		}
 		
 		@Override public void putToGUI(ClientClasses go, AbstractT<Integer> value) {

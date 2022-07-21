@@ -31,6 +31,7 @@ class Group_Governor extends AbstractGroup <ClientClasses> {
 	Group_Governor(ClientClasses go) {
 	   super(go, getHeadComments());
 	}
+	
 	private static String getHeadComments() {
 		return  " " + NL
 				+ "------------- Governor Options -------------" + NL

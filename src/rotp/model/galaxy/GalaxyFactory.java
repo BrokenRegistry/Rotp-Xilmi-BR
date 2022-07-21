@@ -309,7 +309,7 @@ public class GalaxyFactory implements Base {
 //            int[] pmQuadB = new int[]{ 2,1,2,1 }; // companion world location, plus/minus quadrants
 //            String[] compSysName = new String[]{"α", "β", "γ", "δ"}; // companion world greek letter prefix
             int[] compSysId = new int[numCompWorlds];
-            if (numCompWorlds > 0) { 
+            if (numCompWorlds > 0) {
             	for (int i=0; i<numCompWorlds; i++) { // BR: Symmetry management
         			StarSystem sysComp = StarSystemFactory.current().newCompanionSystemForRace(g, i+1);
         			Point.Float pt = opts.galaxyShape().getCompanion(h+1, i);
@@ -319,7 +319,6 @@ public class GalaxyFactory implements Base {
                     compSysId[i] = sysComp.id;
         		}
             }
-            
             // modnar: add option to start game with additional colonies
             // modnar: compSysId is the System ID array for these additional colonies
             Empire emp = new Empire(g, empId, r.id, sys, compSysId, colorId, null);

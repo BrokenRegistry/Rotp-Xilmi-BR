@@ -198,6 +198,7 @@ public interface IGameOptions {
     public void setToDefault();
 
     public int numberStarSystems();
+    public int numberStarSystems(String size); // BR: For Profile Manager comments
     public int numberNebula();
     public default float nebulaSizeMult()                { return 1.0f; }
     public List<Integer> possibleColors();

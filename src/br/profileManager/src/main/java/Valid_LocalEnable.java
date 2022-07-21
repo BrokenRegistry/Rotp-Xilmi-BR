@@ -146,7 +146,7 @@ public class Valid_LocalEnable extends Validation<String> {
 		void unHide() {
 			setValue(clogId);
 		}
-		
+
 //		boolean isLocal() {
 //			return isValueFromCategory(LOCAL_ENABLED);
 //		}

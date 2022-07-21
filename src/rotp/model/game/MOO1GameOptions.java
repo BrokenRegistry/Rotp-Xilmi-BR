@@ -370,38 +370,42 @@ public class MOO1GameOptions implements Base, IGameOptions, Serializable {
     @Override
     public int numGalaxyShapeOption2() {  return galaxyShape.numOptions2(); }
     @Override
-    public int numberStarSystems() {
-            // MOO Strategy Guide, Table 3-2, p.50
-        /*
-        switch (selectedGalaxySize()) {
-                case SIZE_SMALL:  return 24;
-                case SIZE_MEDIUM: return 48;
-                case SIZE_LARGE1:  return 70;
-                case SIZE_HUGE:   return 108;
-                default: return 48;
-        }
-        */
-        switch (selectedGalaxySize()) {
-            case SIZE_TINY:       return 33;
-            case SIZE_SMALL:      return 50;
-            case SIZE_SMALL2:     return 70;
-            case SIZE_MEDIUM:     return 100;
-            case SIZE_MEDIUM2:    return 150;
-            case SIZE_LARGE:      return 225;
-            case SIZE_LARGE2:     return 333;
-            case SIZE_HUGE:       return 500;
-            case SIZE_HUGE2:      return 700;
-            case SIZE_MASSIVE:    return 1000;
-            case SIZE_MASSIVE2:   return 1500;
-            case SIZE_MASSIVE3:   return 2250;
-            case SIZE_MASSIVE4:   return 3333;
-            case SIZE_MASSIVE5:   return 5000;
-            case SIZE_INSANE:     return 10000;
-            case SIZE_LUDICROUS:  return 100000;
-            case SIZE_MAXIMUM:    return maximumSystems();
-        }
-        return 8*(selectedNumberOpponents()+1);
+    public int numberStarSystems() {  // BR: For Profile Manager comments
+    	return numberStarSystems(selectedGalaxySize());
     }
+    @Override
+    public int numberStarSystems(String size) { // BR: For Profile Manager comments
+        // MOO Strategy Guide, Table 3-2, p.50
+    /*
+    switch (selectedGalaxySize()) {
+            case SIZE_SMALL:  return 24;
+            case SIZE_MEDIUM: return 48;
+            case SIZE_LARGE1:  return 70;
+            case SIZE_HUGE:   return 108;
+            default: return 48;
+    }
+    */
+    switch (size) {
+        case SIZE_TINY:       return 33;
+        case SIZE_SMALL:      return 50;
+        case SIZE_SMALL2:     return 70;
+        case SIZE_MEDIUM:     return 100;
+        case SIZE_MEDIUM2:    return 150;
+        case SIZE_LARGE:      return 225;
+        case SIZE_LARGE2:     return 333;
+        case SIZE_HUGE:       return 500;
+        case SIZE_HUGE2:      return 700;
+        case SIZE_MASSIVE:    return 1000;
+        case SIZE_MASSIVE2:   return 1500;
+        case SIZE_MASSIVE3:   return 2250;
+        case SIZE_MASSIVE4:   return 3333;
+        case SIZE_MASSIVE5:   return 5000;
+        case SIZE_INSANE:     return 10000;
+        case SIZE_LUDICROUS:  return 100000;
+        case SIZE_MAXIMUM:    return maximumSystems();
+    }
+    return 8*(selectedNumberOpponents()+1);
+}
     @Override
     public int numberNebula() {
         if (selectedNebulaeOption().equals(NEBULAE_NONE))

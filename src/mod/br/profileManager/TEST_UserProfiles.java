@@ -6,9 +6,9 @@ import java.awt.event.KeyEvent;
 
 import org.junit.jupiter.api.Test;
 
-class UserProfilesTest {
+class TEST_UserProfiles {
 
-	private ClientClasses clientObject = new ClientClassesTest();
+	private ClientClasses clientObject = new TEST_ClientClasses();
 	private UserProfiles userProfiles;
 //	private AbstractParameter<?, ?, ClientClasses> param;
 	
@@ -40,6 +40,4 @@ class UserProfilesTest {
 				, userProfiles.processKey(KeyEvent.VK_U, false, "", clientObject)
 				, "This KeyEvent sould return false");
 	}
-
-
 }

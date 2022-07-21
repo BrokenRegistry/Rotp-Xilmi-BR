@@ -34,7 +34,6 @@ import java.util.ArrayList; // modnar: change to cleaner icon set
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import rotp.mod.br.profiles.BR_Main;
 import rotp.model.game.GameSession;
 import rotp.ui.BasePanel;
 import rotp.ui.RotPUI;
@@ -45,11 +44,11 @@ import rotp.util.ImageManager;
 
 public class Rotp {
     private static final int MB = 1048576;
-    public static final String version = "22.07.15";
+    public static final String version = "22.07.21";
     public static int IMG_W = 1229;
     public static int IMG_H = 768;
 
-    public static String jarFileName = "rotp-" + version + ".jar";
+    public static String jarFileName = "rotp-" + version + RotpGovernor.miniSuffix() + ".jar";
     public static String exeFileName = "rotp-" + version + ".exe";
 //    public static String jarFileName = "rotp-"+RotpGovernor.governorVersion()+RotpGovernor.miniSuffix()+".jar";
 //    public static String exeFileName = "Remnants.exe";
@@ -225,16 +224,17 @@ public class Rotp {
     public static void restartFromLowMemory() {
         restartWithMoreMemory(frame, true);
     }
-    private static boolean restartWithMoreMemory(JFrame frame, boolean reload) {
+    @SuppressWarnings("restriction")
+	private static boolean restartWithMoreMemory(JFrame frame, boolean reload) {
         // MXBeans are not supported by GraalVM Native, so skip this part
         if (RotpGovernor.GRAALVM_NATIVE) {
             System.out.println("Running as GraalVM Native image");
             return false;
         }
         long memorySize = ((com.sun.management.OperatingSystemMXBean) ManagementFactory
-                        .getOperatingSystemMXBean()).getTotalPhysicalMemorySize();
+                        .getOperatingSystemMXBean()).getTotalMemorySize(); // BR: updated deprecated
         long freeMemory = ((com.sun.management.OperatingSystemMXBean) ManagementFactory
-                        .getOperatingSystemMXBean()).getFreePhysicalMemorySize();
+        				.getOperatingSystemMXBean()).getFreeMemorySize();
         int maxMb = (int) (memorySize / MB);
         long allocMb = Runtime.getRuntime().maxMemory() / MB;
         int freeMb = (int) (freeMemory / MB);

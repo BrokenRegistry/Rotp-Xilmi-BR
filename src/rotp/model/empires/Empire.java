@@ -1497,7 +1497,7 @@ public final class Empire implements Base, NamedObject, Serializable {
         List<ShipDesign> designs = scoutDesigns();
         // no scout ship designs
         if (designs.isEmpty()) {
-            System.out.println("No Scout designs");
+            // System.out.println("No Scout designs"); // BR: //
             return;
         } else {
             for (ShipDesign sd: designs) {
@@ -1614,7 +1614,7 @@ public final class Empire implements Base, NamedObject, Serializable {
 
         // no colony ship designs
         if (designs.isEmpty()) {
-            System.out.println("No Colony ship designs");
+            // System.out.println("No Colony ship designs"); // BR: //
             return;
         } else {
             for (ShipDesign sd: designs) {

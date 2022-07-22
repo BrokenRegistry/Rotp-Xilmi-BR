@@ -21,6 +21,7 @@ Download build: https://rayfowler.itch.io/remnants-of-the-precursors
 
 2022.07.22
   - Minor bugs correction
+  - Auto generated Profiles.cfg: Removed the "surprise"-action from "MyRandom" for a better feeling in initial random testing!
 
 2022.07.21
   - Added Option to always have the Control Irradiated in Tech tree.
